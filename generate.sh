@@ -44,3 +44,5 @@ else
   echo 'Failed'
     exit 1;
 fi
+
+cat bad-bots.conf
