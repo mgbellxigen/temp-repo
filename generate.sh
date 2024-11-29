@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # ------------------------ ADD ANY EXCLUDES TO THIS ARRAY ------------------------ #
 # Syntax should be as follows: ("item1" "item2" "item3")
 excludes=("Semrush" "SemrushBot" "AhrefsBot" "Screaming" "oBot")
@@ -31,11 +31,11 @@ do
        return 403;
 }"
 
-done  > /etc/nginx/bad-bots-tmp.conf
+done  > bad-bots-tmp.conf
 
-sed "s/'//g" /etc/nginx/bad-bots-tmp.conf > /etc/nginx/bad-bots.conf
+sed "s/'//g" bad-bots-tmp.conf > bad-bots.conf
 
-rm /etc/nginx/bad-bots-tmp.conf
+rm bad-bots-tmp.conf
 
 nginx -t >/dev/null 2>&1
 if [ $? -eq 0 ]; then
