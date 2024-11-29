@@ -36,5 +36,3 @@ done  > bad-bots-tmp.conf
 sed "s/'//g" bad-bots-tmp.conf > bad-bots.conf
 
 rm bad-bots-tmp.conf
-
-cat bad-bots.conf
